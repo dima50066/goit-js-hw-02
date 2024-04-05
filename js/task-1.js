@@ -1,10 +1,10 @@
 function makeTransaction(quantity, pricePerDroid, customerCredits) {
-  if (quantity * pricePerDroid > customerCredits) {
+  const totalPrice = quantity * pricePerDroid; // Зберігаємо обчислення в змінній.
+
+  if (totalPrice > customerCredits) {
     return `Insufficient funds!`;
   } else {
-    return `You ordered ${quantity} droids worth ${
-      quantity * pricePerDroid
-    } credits!`;
+    return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
   }
 }
 
